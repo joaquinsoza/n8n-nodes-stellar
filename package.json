@@ -33,7 +33,7 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/StellarWallet.credentials.js"
+      "dist/credentials/StellarWalletApi.credentials.js"
     ],
     "nodes": [
       "dist/nodes/StellarSigner/StellarSigner.node.js"
