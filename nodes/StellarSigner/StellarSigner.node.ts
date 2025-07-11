@@ -22,7 +22,7 @@ export class StellarSigner implements INodeType {
 		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
-				name: 'stellarWallet',
+				name: 'stellarWalletApi',
 				required: true,
 			},
 		],
@@ -57,7 +57,7 @@ export class StellarSigner implements INodeType {
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		const items = this.getInputData();
-		const credentials = await this.getCredentials('stellarWallet');
+		const credentials = await this.getCredentials('stellarWalletApi');
 
 		if (!credentials || !credentials.secretKey) {
 			throw new NodeOperationError(this.getNode(), 'Stellar wallet credentials are required');
